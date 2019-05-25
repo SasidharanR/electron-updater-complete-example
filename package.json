@@ -1,6 +1,6 @@
 {
   "name": "electron-updater-complete-example",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A electron updater application",
   "main": "main.js",
   "scripts": {
