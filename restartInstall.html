@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script>
+      window.onload = function() {
+        document.querySelector('#msg').innerHTML = dialog.argument;
+      };
+    </script>
+  </head>
+  <body>
+    <h4>Do u want to Install Update Now</h4>
+    <button onclick="dialog.exit('OK')">Yes</button>
+    <button onclick="dialog.exit('Cancel')">Later</button>
+
+  </body>
+</html>
