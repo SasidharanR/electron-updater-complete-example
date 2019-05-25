@@ -1,5 +1,4 @@
 const {autoUpdater} =require('electron-updater')
-const {dialog,BrowserWindow,ipcMain} =require('electron')
 const log = require('electron-log');
 const ProgressBar = require('electron-progressbar');
 autoUpdater.logger = log;
@@ -19,7 +18,7 @@ exports.check = () => {
                   'file:///'+__dirname+'/updatePopup.html', {width: 350, height: 150} );
             if (result==='OK') {
    
-            log.info("before download");
+           
             autoUpdater.downloadUpdate()
 
            
@@ -46,7 +45,7 @@ exports.check = () => {
                   progressBar.detail = `${value} % out of ${progressBar.getOptions().maxValue} %`;
                 });
 
-    } 
+         } 
     }
         autoUpdater.on('download-progress', (progressObj) => {
             downloadProgress=progressObj.percent;
@@ -60,7 +59,7 @@ exports.check = () => {
           autoUpdater.on('update-downloaded',()=> {
             restartInstall();
             async function restartInstall() {
-  
+                progressBar=null;
                 let result = await eDialog.showDialog(
                       'file:///'+__dirname+'/restartInstall.html', {width: 350, height: 150} );
                 if (result==='OK') {

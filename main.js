@@ -1,6 +1,5 @@
 const {app, BrowserWindow} = require('electron')
 const updater = require('./updater')
-
 let mainWindow
 
 function createWindow () {
@@ -12,7 +11,9 @@ function createWindow () {
     }
   })
 
-  mainWindow.loadFile('index.html')
+    mainWindow.loadFile('index.html')
+  
+  
   setTimeout(updater.check,2000)
   mainWindow.on('closed', function () {
     mainWindow = null

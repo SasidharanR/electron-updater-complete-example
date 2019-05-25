@@ -1,17 +1,18 @@
 {
   "name": "electron-updater-complete-example",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A electron updater application",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "exe":"electron-builder"
+    "exe": "electron-builder",
+    "publish": "electron-builder build -w -p 'always'"
   },
   "repository": "",
   "author": "SasidharanR",
   "license": "S.1",
   "devDependencies": {
-    "electron": "^5.0.2",
+    "electron": "^4.0.6",
     "electron-builder": "^20.40.2"
   },
   "dependencies": {
@@ -41,6 +42,7 @@
         "owner": "SasidharanR",
         "repo": "electron-updater-complete-example",
         "vPrefixedTagName": "true"
+       
       }
     ]
   }
