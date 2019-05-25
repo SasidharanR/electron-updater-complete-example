@@ -1,0 +1,47 @@
+{
+  "name": "electron-updater-complete-example",
+  "version": "1.0.0",
+  "description": "A electron updater application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "exe":"electron-builder"
+  },
+  "repository": "",
+  "author": "SasidharanR",
+  "license": "S.1",
+  "devDependencies": {
+    "electron": "^5.0.2",
+    "electron-builder": "^20.40.2"
+  },
+  "dependencies": {
+    "electron-dialogbox": "^0.3.4",
+    "electron-log": "^3.0.5",
+    "electron-progressbar": "^1.2.0",
+    "electron-updater": "^4.0.6"
+  },
+  "build": {
+    "appId": "electron-updater-exeID",
+    "productName": "electron-updater",
+    "copyright": "Copyright © year 2019 SasidharanR",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "SasidharanR",
+        "repo": "electron-updater-complete-example",
+        "vPrefixedTagName": "true"
+      }
+    ]
+  }
+}
