@@ -11,3 +11,6 @@ Step to Run project:
 `npm run exe`
 
 After running above you will get .exe file and Unpack of exe. Just install the EXE .
+
+#Download Exe
+If you want to download the exe please click here https://github.com/SasidharanR/electron-updater-complete-example/releases/download/v0.0.0/electron-updater-complete-example-setup-0.0.0.exe
